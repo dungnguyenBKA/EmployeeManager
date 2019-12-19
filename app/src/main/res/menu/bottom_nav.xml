@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/manage_employee"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="Quản lý nhân viên"/>
+
+    <item android:id="@+id/manage_project"
+        android:icon="@drawable/ic_archive_black_24dp"
+        android:title="Quản lý dự án"/>
+
+    <item android:id="@+id/manage_room"
+        android:icon="@drawable/ic_domain_black_24dp"
+        android:title="Quản lý phòng ban"/>
+
+</menu>

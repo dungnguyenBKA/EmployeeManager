@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/top_layout">
+
+            <ImageView
+                android:id="@+id/close_employee"
+                app:srcCompat="@drawable/ic_close_black_24dp"
+                android:layout_width="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/title_employ"
+                android:fontFamily="@font/regular"
+                android:layout_marginTop="-5dp"
+                android:layout_marginStart="20dp"
+                android:text="Tạo nhân viên mới"
+                android:textSize="21sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/save_employ"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:focusable="true"
+            android:clickable="true"
+            android:text="Save"
+            android:fontFamily="@font/regular"
+            android:textColor="#2196F3"
+            android:textSize="18sp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/top_layout"
+            android:scaleY="2"
+            android:scaleX="2"
+            app:srcCompat="@drawable/ic_person_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Thông tin trong công ty -->
+
+        <EditText
+            android:id="@+id/ho_ten"
+            android:layout_below="@+id/icon"
+            android:hint="(*) Tên nhân viên"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/ma_nv"
+            android:layout_below="@+id/ho_ten"
+            android:hint="(*) Mã nhân viên"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/chuc_vu"
+            android:text="Chức vụ"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@id/ma_nv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:layout_below="@+id/chuc_vu"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/spinner_cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/phong_ban"
+            android:text="Phòng ban"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@id/spinner_cv"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:layout_below="@+id/phong_ban"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/spinner_pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/du_an"
+            android:text="Dự án"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@+id/spinner_pb"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:layout_below="@+id/du_an"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/spinner_da"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+        <EditText
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/he_so_luong"
+            android:inputType="numberDecimal"
+            android:hint="(*) Hệ số lương: 1 -> 6"
+            android:layout_below="@+id/spinner_da"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/luong"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/he_so_luong"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Sample Luong: "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Thông tin cá nhân -->
+
+        <LinearLayout
+            android:id="@+id/layout_person_info"
+            android:layout_below="@+id/he_so_luong"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/gioi_tinh"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:hint="Giới tính"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/ngay_sinh"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:hint="Sample Ngay Sinh"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/dia_chi"
+                android:hint="Địa chỉ"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/sdt"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:hint="Số điện thoại"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <EditText
+                android:id="@+id/email"
+                android:hint="Email"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
+

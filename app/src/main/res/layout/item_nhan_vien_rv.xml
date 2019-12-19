@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/curve_rectangle_border"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    android:id="@+id/item">
+
+
+    <TextView
+        android:id="@+id/employee_name"
+        android:textSize="20sp"
+        android:text="sample name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/employee_name"
+        android:text="sample CV"
+        android:id="@+id/employee_chuc_vu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/employee_phong_ban"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/employee_chuc_vu"
+        android:text="sample phong ban"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/employee_phong_ban"
+        android:text="sample du an"
+        android:id="@+id/employee_du_an"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/delete_employee"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:scaleY="2"
+        android:scaleX="2"
+        app:srcCompat="@drawable/ic_delete_black_24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
