@@ -36,14 +36,24 @@ public class DuAnRecyclerAdapter extends RecyclerView.Adapter<DuAnRecyclerAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        DuAn duAn = duAnArrayList.get(position);
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
+        final DuAn duAn = duAnArrayList.get(position);
 
         holder.duAn.setText(duAn.getTenDA());
         holder.maDA.setText(duAn.getMaDA());
 
         int soNguoi = DbEmployeeManager.getInstance(context).getCountEmployeeEachProject(duAn.getMaDA());
         holder.soNguoi.setText("Số người tham gia: "+ soNguoi);
+
+        holder.delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DbDAManager.getInstance(context).deleteRow(duAn.getMaDA());
+
+                duAnArrayList.remove(duAn);
+                notifyItemRemoved(position);
+            }
+        });
     }
 
     @Override
@@ -54,6 +64,7 @@ public class DuAnRecyclerAdapter extends RecyclerView.Adapter<DuAnRecyclerAdapte
     class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView maDA, duAn, soNguoi;
+        ImageView delete;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -61,6 +72,7 @@ public class DuAnRecyclerAdapter extends RecyclerView.Adapter<DuAnRecyclerAdapte
             maDA = itemView.findViewById(R.id.ma_du_an);
             duAn = itemView.findViewById(R.id.ten_du_an);
             soNguoi = itemView.findViewById(R.id.du_an_nguoi);
+            delete = itemView.findViewById(R.id.delete_du_an);
         }
     }
 

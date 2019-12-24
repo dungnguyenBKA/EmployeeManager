@@ -1,24 +1,15 @@
 package com.example.qunlnhns.db;
 
-import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-import com.example.qunlnhns.model.NhanVien;
-
-import java.sql.Date;
-import java.util.ArrayList;
-import java.util.List;
-
 public class DbManager extends SQLiteOpenHelper {
 
     private static final String TAG = "dung_test";
-
     private static final String DATABASE_NAME = "QuanLyNhanSu";
     private static final int VERSION = 1;
 
@@ -114,7 +105,6 @@ public class DbManager extends SQLiteOpenHelper {
                 "('CV07', 'Nhân viên kỹ thuật')";
 
         db.execSQL(add);
-
     }
 
     private void insertDuAn(SQLiteDatabase db){
